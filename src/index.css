@@ -91,7 +91,9 @@ footer { padding-bottom: 180px; }
 .direct-call-button:hover { transform: translateY(-3px); box-shadow: 0 12px 35px #f59e0b38, inset 0 1px 0 #fff9; }
 .direct-call-button:hover .direct-call-arrow { transform: translate(2px, -2px); }
 .direct-call-button:focus-visible { outline: 3px solid #fef3c7; outline-offset: 5px; }
-@media(max-width:640px) { .hero-showcase-divider { margin: 22px 0; } }
+@media (width < 640px), (hover: none) and (pointer: coarse) {
+  .hero-showcase-divider, .practice-showcase { display: none; }
+}
 @media(prefers-reduced-motion:reduce) { .direct-call-button, .direct-call-arrow { transition: none; } }
 
 @layer base {
