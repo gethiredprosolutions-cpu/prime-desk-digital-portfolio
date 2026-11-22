@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState } from 'react';
+import React, { useLayoutEffect, useRef, useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { CareerServices } from './components/CareerServices';
@@ -15,6 +15,22 @@ import { CAREER_SERVICES, CYBER_SERVICES, WEB_SERVICES } from './data/portfolioD
 
 export default function App() {
   const [packageModalOpen, setPackageModalOpen] = useState(false);
+  const pageRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLElement>(null);
+
+  useLayoutEffect(() => {
+    const page = pageRef.current;
+    const header = headerRef.current;
+    if (!page || !header) return;
+
+    const updateHeaderHeight = () => {
+      page.style.setProperty('--site-header-height', header.getBoundingClientRect().height + 'px');
+    };
+    updateHeaderHeight();
+    const observer = new ResizeObserver(updateHeaderHeight);
+    observer.observe(header, { box: 'border-box' });
+    return () => observer.disconnect();
+  }, []);
 
   const handleOpenBooking = () => {
     setPackageModalOpen(true);
@@ -57,9 +73,10 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-neutral-950 text-neutral-100 selection:bg-amber-400 selection:text-neutral-950">
+    <div ref={pageRef} className="min-h-screen bg-neutral-950 text-neutral-100 selection:bg-amber-400 selection:text-neutral-950">
       {/* 3-Zone Top Bar Navigation */}
-      <Navbar 
+      <Navbar
+        ref={headerRef}
         onOpenBooking={handleOpenBooking} 
         onOpenQuote={handleOpenQuote} 
       />

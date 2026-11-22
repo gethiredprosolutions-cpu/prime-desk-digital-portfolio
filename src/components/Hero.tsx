@@ -19,7 +19,7 @@ export const Hero: React.FC<HeroProps> = () => {
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="hero-content relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Centered Hero Content positioned at the very top */}
         <div className="max-w-4xl mx-auto text-center flex flex-col items-center justify-start pt-1">
           <h1 className="hero-heading text-3xl sm:text-4xl md:text-5xl lg:text-[3.35rem] font-semibold text-neutral-100 leading-[1.2] tracking-tight mt-0 mb-3 [text-wrap:balance] drop-shadow-[0_2px_14px_rgba(0,0,0,0.92)]">

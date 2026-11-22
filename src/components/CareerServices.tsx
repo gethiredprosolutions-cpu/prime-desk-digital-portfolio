@@ -21,7 +21,7 @@ export const CareerServices: React.FC<CareerServicesProps> = () => {
   return (
     <section id="career-services" className="pt-0 pb-12 sm:pb-14 lg:pb-16 bg-neutral-950 border-b border-neutral-900">
       {/* Full-bleed Showcase Image occupying top, left, and right edges */}
-      <div className="practice-showcase relative w-full h-[260px] sm:h-[360px] lg:h-[440px] overflow-hidden border-b border-neutral-800 bg-neutral-900">
+      <div className="relative w-full h-[260px] sm:h-[360px] lg:h-[440px] overflow-hidden border-b border-neutral-800 bg-neutral-900">
         {PRACTICE_SHOWCASE_SLIDES.map((slide, idx) => (
           <div
             key={slide.id}
