@@ -84,12 +84,6 @@ export default function App() {
       {/* Hero Section with Split-Screen & Proof Row */}
       <Hero onOpenBooking={handleOpenBooking} />
 
-      <div
-        role="separator"
-        aria-label="Hero section ends; rotating service images begin"
-        className="hero-showcase-divider"
-      />
-
       {/* MAJOR FOCUS: Career Services (CV Revamp, LinkedIn, Compensation Strategy) */}
       <CareerServices 
         onSelectService={handleSelectService}

@@ -101,17 +101,6 @@ footer { padding-bottom: 180px; }
 @media (max-width: 640px) { .floating-page-actions { right: 16px; bottom: max(18px, env(safe-area-inset-bottom)); gap: 12px; } .whatsapp-pulse, .back-to-top { font-size: 12px; padding: 11px 15px; } #career-services h4 { min-height: 0; } footer { padding-bottom: 150px; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .whatsapp-pulse::before, .whatsapp-pulse::after, .whatsapp-status { animation: none; } .whatsapp-pulse::before, .whatsapp-pulse::after { display: none; } }
 
-.hero-showcase-divider {
-  position: relative;
-  z-index: 20;
-  width: 100%;
-  height: 5px;
-  margin: 28px 0;
-  flex-shrink: 0;
-  background: linear-gradient(90deg, #fbbf24 0%, #fbbf24 33.333%, #22d3ee 33.333%, #22d3ee 66.666%, #34d399 66.666%, #34d399 100%);
-  box-shadow: 0 0 14px rgb(251 191 36 / 18%);
-}
-
 .direct-call-button { display: inline-flex; align-items: center; gap: 14px; padding: 14px 18px 14px 12px; min-height: 76px; width: min(100%, 325px); border: 1px solid #fcd34d; border-radius: 18px; color: #241a06; background: linear-gradient(115deg, #fde68a, #fbbf24 55%, #f59e0b); box-shadow: 0 8px 28px #f59e0b20, inset 0 1px 0 #fff9; text-decoration: none; transition: transform .2s, box-shadow .2s; }
 .direct-call-icon { display: grid; place-items: center; width: 46px; height: 46px; flex-shrink: 0; background: #17130be8; color: #fde68a; border-radius: 13px; box-shadow: inset 0 1px 0 #ffffff24; }
 .direct-call-copy { display: flex; flex-direction: column; gap: 3px; }
@@ -127,7 +116,6 @@ footer { padding-bottom: 180px; }
     background: #0a0a0a;
     backdrop-filter: none;
   }
-  .hero-showcase-divider { display: none; }
 }
 @media(prefers-reduced-motion:reduce) { .direct-call-button, .direct-call-arrow { transition: none; } }
 
