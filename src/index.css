@@ -14,7 +14,7 @@
   .hero-section {
     display: flex;
     flex-direction: column;
-    padding-block: clamp(16px, 5vw, 28px) calc(24px + 100lvh - 100svh);
+    padding-block: clamp(16px, 5vw, 28px) calc(clamp(44px, 8svh, 72px) + 100lvh - 100svh);
     background: linear-gradient(90deg, #302018, #20201f 52%, #0b3433);
   }
   .hero-content {
