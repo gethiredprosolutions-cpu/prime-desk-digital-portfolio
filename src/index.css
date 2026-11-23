@@ -14,7 +14,7 @@
   .hero-section {
     display: flex;
     flex-direction: column;
-    padding-block: clamp(16px, 5vw, 28px) 18px;
+    padding-block: clamp(16px, 5vw, 28px) calc(24px + 100lvh - 100svh);
     background: linear-gradient(110deg, #21160e, #151717 52%, #092523);
   }
   .hero-content {
@@ -22,7 +22,7 @@
     flex: 1;
     flex-direction: column;
     justify-content: space-between;
-    gap: clamp(92px, 27vw, 154px);
+    gap: clamp(44px, 14svh - 44px, 104px);
     width: 100%;
   }
   .hero-art {
@@ -66,13 +66,13 @@
   }
   .hero-art img {
     object-fit: contain;
-    object-position: center 72%;
+    object-position: center 56%;
   }
   .hero-art::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, #080b0cbd 0%, #080b0ca6 40%, transparent 62%, transparent 82%, #080b0c75 100%);
+    background: linear-gradient(180deg, #080b0cbd 0%, #080b0ca6 34%, transparent 49%, transparent 76%, #080b0c75 100%);
   }
 }
 
