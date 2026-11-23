@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Target, FileCheck2, Briefcase, Globe } from 'lucide-react';
 import { PRACTICE_SHOWCASE_SLIDES } from '../data/portfolioData';
 
@@ -10,18 +10,33 @@ interface CareerServicesProps {
 export const CareerServices: React.FC<CareerServicesProps> = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Auto-play timer for the 3-photo showcase (2 seconds per slide)
+  const showcaseRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide(prev => (prev + 1) % PRACTICE_SHOWCASE_SLIDES.length);
-    }, 2000);
-    return () => clearInterval(timer);
+    const showcase = showcaseRef.current;
+    if (!showcase) return;
+
+    let timer: number | undefined;
+    const observer = new IntersectionObserver(([entry]) => {
+      window.clearInterval(timer);
+      if (entry.isIntersecting) {
+        timer = window.setInterval(() => {
+          setCurrentSlide(prev => (prev + 1) % PRACTICE_SHOWCASE_SLIDES.length);
+        }, 2000);
+      }
+    });
+    observer.observe(showcase);
+
+    return () => {
+      observer.disconnect();
+      window.clearInterval(timer);
+    };
   }, []);
 
   return (
     <section id="career-services" className="pt-0 pb-12 sm:pb-14 lg:pb-16 bg-neutral-950 border-b border-neutral-900">
       {/* Full-bleed Showcase Image occupying top, left, and right edges */}
-      <div className="relative w-full h-[260px] sm:h-[360px] lg:h-[440px] overflow-hidden border-b border-neutral-800 bg-neutral-900">
+      <div ref={showcaseRef} className="relative w-full h-[260px] sm:h-[360px] lg:h-[440px] overflow-hidden border-b border-neutral-800 bg-neutral-900">
         {PRACTICE_SHOWCASE_SLIDES.map((slide, idx) => (
           <div
             key={slide.id}

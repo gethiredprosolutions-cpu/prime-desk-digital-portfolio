@@ -122,8 +122,12 @@ footer { padding-bottom: 180px; }
 .direct-call-button:hover .direct-call-arrow { transform: translate(2px, -2px); }
 .direct-call-button:focus-visible { outline: 3px solid #fef3c7; outline-offset: 5px; }
 @media (width < 640px), (hover: none) and (pointer: coarse) {
-  .hero-section { min-height: calc(100dvh - var(--site-header-height, 0px)); }
-  .hero-showcase-divider { margin: 0 0 12px; }
+  .hero-section { min-height: calc(100lvh - var(--site-header-height, 0px)); }
+  .site-header {
+    background: #0a0a0a;
+    backdrop-filter: none;
+  }
+  .hero-showcase-divider { display: none; }
 }
 @media(prefers-reduced-motion:reduce) { .direct-call-button, .direct-call-arrow { transition: none; } }
 

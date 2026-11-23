@@ -46,7 +46,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenQuote, ref }) => {
   );
 
   return (
-    <header ref={ref} className="sticky top-0 z-40 bg-neutral-950/95 backdrop-blur-xl border-b border-white/10 shadow-[0_8px_30px_-20px_rgba(0,0,0,0.8)]">
+    <header ref={ref} className="site-header sticky top-0 z-40 bg-neutral-950/95 backdrop-blur-xl border-b border-white/10 shadow-[0_8px_30px_-20px_rgba(0,0,0,0.8)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-20 py-3 flex flex-wrap items-center justify-between gap-2 xl:h-20 xl:flex-nowrap xl:py-0 xl:grid xl:grid-cols-[auto_1fr_auto] xl:gap-5">
         {/* Zone 1: Brand title */}
         <a 
