@@ -64,12 +64,15 @@
     aspect-ratio: auto;
     mask-image: none;
   }
-  .hero-art img { object-position: 53% center; }
+  .hero-art img {
+    object-fit: contain;
+    object-position: center 72%;
+  }
   .hero-art::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, #080b0cbd 0%, #080b0ca6 42%, #080b0c26 72%, #080b0c75 100%);
+    background: linear-gradient(180deg, #080b0cbd 0%, #080b0ca6 40%, transparent 62%, transparent 82%, #080b0c75 100%);
   }
 }
 
