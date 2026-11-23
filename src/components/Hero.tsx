@@ -7,7 +7,7 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = () => {
   return (
-    <section className="hero-section relative overflow-hidden pt-2 pb-8 sm:pt-3 sm:pb-10 lg:pt-4 lg:pb-12 border-b border-neutral-800">
+    <section className="hero-section relative overflow-hidden pt-2 pb-8 sm:pt-3 sm:pb-10 lg:pt-4 lg:pb-12">
       {/* High-Clarity Panoramic Background combining Career, Cyber, and Web Development */}
       <div className="hero-art absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <img
