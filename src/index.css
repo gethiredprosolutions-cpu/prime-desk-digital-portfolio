@@ -5,6 +5,19 @@
 }
 
 .hero-section { border-bottom: 2px solid #7b8588; }
+@media (width >= 640px) and (hover: hover) {
+  .hero-section { border-bottom: 0; }
+  .hero-section + #career-services {
+    padding-top: 12px;
+  }
+  .hero-section + #career-services::before {
+    content: '';
+    display: block;
+    height: 2px;
+    margin-bottom: 12px;
+    background: #7b8588;
+  }
+}
 .hero-description { max-width: 760px; margin: 8px auto 18px; padding: 17px 23px; color: #fff; font-size: 18px; line-height: 1.75; font-weight: 500; text-shadow: 0 2px 5px #000, 0 1px 2px #000; }
 .hero-ats-badge { display: inline-flex; align-items: center; justify-content: center; padding: 10px 17px; border: 1px solid #fbbf245c; border-radius: 999px; background: #151106eb; color: #fff7dc; font-size: 15px; font-weight: 600; line-height: 1.5; }
 .hero-metrics { margin-top: 8px; gap: 14px; padding: 12px 15px; border: 1px solid #ffffff38; border-radius: 12px; background: #080e12e6; }
