@@ -57,6 +57,22 @@
   .hero-metric-label { font-size: 11px; line-height: 1.35; }
 }
 
+@media (orientation: portrait) and (width < 640px),
+       (orientation: portrait) and (hover: none) and (pointer: coarse) {
+  .hero-art {
+    top: 0;
+    aspect-ratio: auto;
+    mask-image: none;
+  }
+  .hero-art img { object-position: 53% center; }
+  .hero-art::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #080b0cbd 0%, #080b0ca6 42%, #080b0c26 72%, #080b0c75 100%);
+  }
+}
+
 html { scroll-padding-top: 110px; }
 body { font-family: var(--font-sans); font-weight: 400; line-height: 1.7; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
 button, input, textarea, select { font-family: inherit; }
