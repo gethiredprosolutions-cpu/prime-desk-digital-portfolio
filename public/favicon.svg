@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="tile" x2="1" y2="1">
+      <stop stop-color="#24282c"/>
+      <stop offset="1" stop-color="#0b1114"/>
+    </linearGradient>
+    <linearGradient id="gold">
+      <stop stop-color="#ffe08a"/>
+      <stop offset="1" stop-color="#ffad24"/>
+    </linearGradient>
+    <linearGradient id="aqua">
+      <stop stop-color="#91f4ff"/>
+      <stop offset="1" stop-color="#16c6e7"/>
+    </linearGradient>
+    <linearGradient id="teal">
+      <stop stop-color="#82f7cb"/>
+      <stop offset="1" stop-color="#19cf98"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="15" fill="url(#tile)" stroke="#3f4b50" stroke-width="2"/>
+  <path d="M10 33 32 11l22 22-8 3-14-14-14 14z" fill="url(#gold)"/>
+  <path d="m14 43 18-18 18 18-7 3-11-11-11 11z" fill="url(#aqua)"/>
+  <path d="m18 52 14-14 14 14-7 2-7-7-7 7z" fill="url(#teal)"/>
+</svg>
